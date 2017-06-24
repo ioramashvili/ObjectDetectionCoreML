@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             
             preview.image = selectedImage
             
-//            detectForInceptionv3()
+            detectForInceptionv3()
             detectForResent50()
             detectForGoogleNetPlaces()
         }
@@ -48,19 +48,19 @@ class ViewController: UIViewController {
         }
     }
     
-//    func detectForInceptionv3() {
-//        let model = try! VNCoreMLModel(for: Inceptionv3().model)
-//        let requset = VNCoreMLRequest(model: model) { (results, error) in
-//            guard let results = results.results as? [VNClassificationObservation], let first = results.first else {
-//                fatalError("detectForInceptionv3 failed")
-//            }
-//            
-//            self.Inceptionv3Label.text = "Inceptionv3: \(first.identifier) \(first.confidence)"
-//        }
-//        
-//        let handler = VNImageRequestHandler(cgImage: selectedImage.cgImage!, options: [:])
-//        try? handler.perform([requset])
-//    }
+    func detectForInceptionv3() {
+        let model = try! VNCoreMLModel(for: Inceptionv3().model)
+        let requset = VNCoreMLRequest(model: model) { (results, error) in
+            guard let results = results.results as? [VNClassificationObservation], let first = results.first else {
+                fatalError("detectForInceptionv3 failed")
+            }
+            
+            self.Inceptionv3Label.text = "Inceptionv3: \(first.identifier) \(first.confidence)"
+        }
+        
+        let handler = VNImageRequestHandler(cgImage: selectedImage.cgImage!, options: [:])
+        try? handler.perform([requset])
+    }
     
     func detectForGoogleNetPlaces() {
         let model = try! VNCoreMLModel(for: GoogLeNetPlaces().model)
