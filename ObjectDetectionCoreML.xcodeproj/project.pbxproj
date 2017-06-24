@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		439A76DB1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 439A76DA1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel */; };
+		439A76DF1EFEC7BE00FFF315 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 439A76DE1EFEC7BE00FFF315 /* Resnet50.mlmodel */; };
 		43FF86CF1EFEC37C005311B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF86CE1EFEC37C005311B2 /* AppDelegate.swift */; };
 		43FF86D11EFEC37C005311B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF86D01EFEC37C005311B2 /* ViewController.swift */; };
 		43FF86D41EFEC37C005311B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FF86D21EFEC37C005311B2 /* Main.storyboard */; };
@@ -15,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		439A76D21EFEC57100FFF315 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		439A76D31EFEC57800FFF315 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		439A76DA1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
+		439A76DE1EFEC7BE00FFF315 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../Resnet50.mlmodel; sourceTree = "<group>"; };
 		43FF86CB1EFEC37C005311B2 /* ObjectDetectionCoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectDetectionCoreML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FF86CE1EFEC37C005311B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43FF86D01EFEC37C005311B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,11 +41,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		439A76D11EFEC57100FFF315 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				439A76D31EFEC57800FFF315 /* CoreML.framework */,
+				439A76D21EFEC57100FFF315 /* Vision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		43FF86C21EFEC37C005311B2 = {
 			isa = PBXGroup;
 			children = (
 				43FF86CD1EFEC37C005311B2 /* ObjectDetectionCoreML */,
 				43FF86CC1EFEC37C005311B2 /* Products */,
+				439A76D11EFEC57100FFF315 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +70,8 @@
 		43FF86CD1EFEC37C005311B2 /* ObjectDetectionCoreML */ = {
 			isa = PBXGroup;
 			children = (
+				439A76DA1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel */,
+				439A76DE1EFEC7BE00FFF315 /* Resnet50.mlmodel */,
 				43FF86CE1EFEC37C005311B2 /* AppDelegate.swift */,
 				43FF86D01EFEC37C005311B2 /* ViewController.swift */,
 				43FF86D21EFEC37C005311B2 /* Main.storyboard */,
@@ -137,6 +155,8 @@
 			files = (
 				43FF86D11EFEC37C005311B2 /* ViewController.swift in Sources */,
 				43FF86CF1EFEC37C005311B2 /* AppDelegate.swift in Sources */,
+				439A76DF1EFEC7BE00FFF315 /* Resnet50.mlmodel in Sources */,
+				439A76DB1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				DEVELOPMENT_TEAM = P56L8EXYGW;
 				INFOPLIST_FILE = ObjectDetectionCoreML/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -283,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COREML_CODEGEN_LANGUAGE = Swift;
 				DEVELOPMENT_TEAM = P56L8EXYGW;
 				INFOPLIST_FILE = ObjectDetectionCoreML/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -312,6 +334,7 @@
 				43FF86DF1EFEC37C005311B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
