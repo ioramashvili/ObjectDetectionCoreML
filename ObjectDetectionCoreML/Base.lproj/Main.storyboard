@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="inh-Uk-U3b">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FZj-Ok-9yh" customClass="ViewController" customModule="BasicCoreML" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FZj-Ok-9yh" customClass="ViewController" customModule="ObjectDetectionCoreML" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Cy-Z1-hcK"/>
                         <viewControllerLayoutGuide type="bottom" id="Az4-Lh-Fgg"/>
@@ -25,7 +25,7 @@
                                 <color key="backgroundColor" red="0.070588235289999995" green="0.72549019609999998" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CnX-gM-pJE">
-                                <rect key="frame" x="10" y="565" width="355" height="92"/>
+                                <rect key="frame" x="10" y="531" width="355" height="126"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resent50: Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSy-71-Hjs">
                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="24"/>
@@ -43,6 +43,13 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inceptionv3: Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUk-TJ-1rx">
                                         <rect key="frame" x="0.0" y="68" width="0.0" height="24"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MobileNet: Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VM-cH-3Ih">
+                                        <rect key="frame" x="0.0" y="102" width="0.0" height="24"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,11 +80,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Inceptionv3Label" destination="zUk-TJ-1rx" id="3C1-cP-FKp"/>
-                        <outlet property="googleNetPlacesLabel" destination="eO9-9s-6Hh" id="DNe-Dl-zcp"/>
+                        <outlet property="Inceptionv3Label" destination="zUk-TJ-1rx" id="0iW-x9-8ju"/>
+                        <outlet property="googleNetPlacesLabel" destination="eO9-9s-6Hh" id="dWZ-Dj-lUb"/>
+                        <outlet property="mobileNetLabel" destination="5VM-cH-3Ih" id="LCj-8b-HGI"/>
                         <outlet property="preview" destination="duK-cN-Ve8" id="ZYz-mS-TqY"/>
                         <outlet property="previewView" destination="DnO-0H-kUq" id="FTd-4q-J0J"/>
-                        <outlet property="resent50Label" destination="ZSy-71-Hjs" id="Ju2-mx-hf1"/>
+                        <outlet property="resent50Label" destination="ZSy-71-Hjs" id="4hw-3S-W2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uub-OY-CZu" sceneMemberID="firstResponder"/>

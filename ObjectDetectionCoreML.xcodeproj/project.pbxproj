@@ -10,6 +10,7 @@
 		439A76DB1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 439A76DA1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel */; };
 		439A76DF1EFEC7BE00FFF315 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 439A76DE1EFEC7BE00FFF315 /* Resnet50.mlmodel */; };
 		439A76E11EFEDA3200FFF315 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 439A76E01EFEDA3200FFF315 /* Inceptionv3.mlmodel */; };
+		43B1FBE11EFFD2FB00C23502 /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 43B1FBE01EFFD2FB00C23502 /* MobileNet.mlmodel */; };
 		43FF86CF1EFEC37C005311B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF86CE1EFEC37C005311B2 /* AppDelegate.swift */; };
 		43FF86D11EFEC37C005311B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF86D01EFEC37C005311B2 /* ViewController.swift */; };
 		43FF86D41EFEC37C005311B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FF86D21EFEC37C005311B2 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		439A76DA1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		439A76DE1EFEC7BE00FFF315 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		439A76E01EFEDA3200FFF315 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		43B1FBE01EFFD2FB00C23502 /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNet.mlmodel; path = "../../../../Downloads/MobileNet-CoreML-master/MobileNet.mlmodel"; sourceTree = "<group>"; };
 		43FF86CB1EFEC37C005311B2 /* ObjectDetectionCoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectDetectionCoreML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FF86CE1EFEC37C005311B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43FF86D01EFEC37C005311B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		439A76E21EFEDAC200FFF315 /* CoreML Models */ = {
 			isa = PBXGroup;
 			children = (
+				43B1FBE01EFFD2FB00C23502 /* MobileNet.mlmodel */,
 				439A76E01EFEDA3200FFF315 /* Inceptionv3.mlmodel */,
 				439A76DA1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel */,
 				439A76DE1EFEC7BE00FFF315 /* Resnet50.mlmodel */,
@@ -166,6 +169,7 @@
 			files = (
 				439A76E11EFEDA3200FFF315 /* Inceptionv3.mlmodel in Sources */,
 				43FF86D11EFEC37C005311B2 /* ViewController.swift in Sources */,
+				43B1FBE11EFFD2FB00C23502 /* MobileNet.mlmodel in Sources */,
 				43FF86CF1EFEC37C005311B2 /* AppDelegate.swift in Sources */,
 				439A76DF1EFEC7BE00FFF315 /* Resnet50.mlmodel in Sources */,
 				439A76DB1EFEC6D100FFF315 /* GoogLeNetPlaces.mlmodel in Sources */,

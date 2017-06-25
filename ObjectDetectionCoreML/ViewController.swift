@@ -10,6 +10,7 @@ class ViewController: UIViewController {
     @IBOutlet var resent50Label: UILabel!
     @IBOutlet var googleNetPlacesLabel: UILabel!
     @IBOutlet var Inceptionv3Label: UILabel!
+    @IBOutlet var mobileNetLabel: UILabel!
     
     var videoDataOutput: AVCaptureVideoDataOutput!
     var videoDataOutputQueue: DispatchQueue!
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
             detectForInceptionv3()
             detectForResent50()
             detectForGoogleNetPlaces()
+            detectMobileNet()
         }
     }
     
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
         resent50Label.text = ""
         googleNetPlacesLabel.text = ""
         Inceptionv3Label.text = ""
+        mobileNetLabel.text = ""
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,6 +87,20 @@ class ViewController: UIViewController {
             }
             
             self.resent50Label.text = "Resnet50: \(first.identifier) \(first.confidence)"
+        }
+        
+        let handler = VNImageRequestHandler(cgImage: selectedImage.cgImage!, options: [:])
+        try? handler.perform([requset])
+    }
+    
+    func detectMobileNet() {
+        let model = try! VNCoreMLModel(for: MobileNet().model)
+        let requset = VNCoreMLRequest(model: model) { (results, error) in
+            guard let results = results.results as? [VNClassificationObservation], let first = results.first else {
+                fatalError("MobileNet failed")
+            }
+            
+            self.mobileNetLabel.text = "MobileNet: \(first.identifier) \(first.confidence)"
         }
         
         let handler = VNImageRequestHandler(cgImage: selectedImage.cgImage!, options: [:])
